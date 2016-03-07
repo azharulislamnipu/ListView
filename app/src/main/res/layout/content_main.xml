@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.azharulislamnipu.listview.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height"
+        android:singleLine="true"
+        android:text="@string/text_view"
+        android:textColor="@android:color/white"
+        android:textIsSelectable="false"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:typeface="normal"
+        android:gravity="center_vertical"
+        android:id="@+id/textView"
+        android:background="@color/colorAccent" />
+
+    <ListView
+        android:layout_below="@+id/textView"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="@dimen/abc_action_bar_default_height"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/addButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:id="@+id/addButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/listview"
+        android:layout_alignEnd="@+id/listview"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" />
+</RelativeLayout>
